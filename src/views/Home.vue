@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <img class="logo" alt="Vue logo" src="../assets/logo.png">
+    Home
   </div>
 </template>
 
@@ -8,6 +8,6 @@
 import Vue from "vue";
 
 export default Vue.extend({
-  name: "home",
-  });
+  name: "home"
+});
 </script>
