@@ -1,6 +1,20 @@
-/* Palette */
+/* HSL */
+$alvai-blue: hsla(210%, 77%, 57%, 1);
+$alvai-dark: hsla(210%, 29%, 24%, 1);
+$alvai-rose: hsla(356%, 92%, 71%, 1);
+$alvai-light: hsla(60%, 100%, 90%, 1);
+$alvai-yellow: hsla(43%, 100%, 73%, 1);
+
+/* RGBA */
 $alvai-blue: rgba(60, 145, 230, 1);
-$alvai-dark: rgba(34, 31, 32, 1);
-$alvai-rose: rgba(251, 114, 123, 1);
+$alvai-dark: rgba(44, 62, 80, 1);
+$alvai-rose: rgba(249, 112, 121, 1);
 $alvai-light: rgba(255, 255, 203, 1);
-$alvai-yellow: rgba(255, 218, 107, 1);
+$alvai-yellow: rgba(255, 217, 117, 1);
+
+/* HEX */
+$alvai-blue: #3C91E6;
+$alvai-dark: #2C3E50;
+$alvai-rose: #F97079;
+$alvai-light: #FFFFCB;
+$alvai-yellow: #FFD975;
