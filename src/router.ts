@@ -19,10 +19,10 @@ export default new Router({
         import(/* webpackChunkName: "search" */ "./views/Search.vue")
     },
     {
-      path: "/track/:id",
-      name: "track",
+      path: "/favorites",
+      name: "favorites",
       component: () =>
-        import(/* webpackChunkName: "track" */ "./views/Track.vue")
+        import(/* webpackChunkName: "track" */ "./views/Favorites.vue")
     }
   ]
 });
