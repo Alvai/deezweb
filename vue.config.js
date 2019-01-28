@@ -12,5 +12,8 @@ module.exports = {
         data: `@import "@/assets/styles/variables.scss";`
       }
     }
+  },
+  devServer: {
+    disableHostCheck: true
   }
 };
