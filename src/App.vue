@@ -1,12 +1,24 @@
 <template>
   <div id="app">
+    <Navbar/>
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/search">Chercher une musique</router-link>
     </div>
     <router-view/>
   </div>
 </template>
+
+<script lang="ts">
+import Vue from "vue";
+import "bootstrap/dist/css/bootstrap.css";
+import Navbar from "@/components/Navbar.vue";
+
+export default Vue.extend({
+  name: "app",
+  components: {
+    Navbar
+  }
+});
+</script>
 
 <style lang="scss">
 #app {
