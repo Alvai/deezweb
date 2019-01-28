@@ -2,7 +2,7 @@
   <div id="app">
     <div id="nav">
       <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/search">Chercher une musique</router-link>
     </div>
     <router-view/>
   </div>
@@ -20,9 +20,9 @@
   padding: 30px;
   a {
     font-weight: bold;
-    color: #2c3e50;
+    color: $primary-color;
     &.router-link-exact-active {
-      color: #42b983;
+      color: $secondary-color;
     }
   }
 }
