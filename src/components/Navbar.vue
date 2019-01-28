@@ -1,6 +1,6 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-light bg-light" :class="{ 'navbarOpen': show }">
-    <a class="navbar-brand" href="#"><img class="logo" alt="Vue logo" src="../assets/logo.png"></a>
+     <router-link class="navbar-brand" to="/"><img class="logo" alt="Vue logo" src="../assets/logo.png"></router-link>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" @click="toggleNavbar">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -24,7 +24,7 @@ export default Vue.extend({
   data() {
     return {
       show: false
-    }
+    };
   },
   methods: {
     toggleNavbar() {
@@ -35,10 +35,10 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
-  .logo {
-    width: 40%;
-  }
-  .navbar-brand {
-    width: 50%;
-  }
+.logo {
+  width: 20vw;
+}
+.navbar-brand {
+  width: 50%;
+}
 </style>
