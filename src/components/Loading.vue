@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-if="loading">
     <img src="../assets/lave.svg" alt="loading..."/>
     <h4>Loading...</h4>
   </div>
@@ -8,6 +8,12 @@
 <script>
 import Vue from "vue";
 export default Vue.extend({
-  name: "Loading"
+  name: "Loading",
+  props: {
+    loading: {
+      type: Boolean,
+      default: false
+    }
+  }
 });
 </script>
