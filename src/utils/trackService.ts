@@ -39,11 +39,18 @@ const removeFavorite = (track: DeezerTrack): void => {
   setFavorites(updatedFavorites);
 };
 
+const getRandomFavoriteTrack = (): DeezerTrack => {
+  const favorites = loadFavorites();
+  const randomTrack = favorites[Math.floor(Math.random()*favorites.length)];
+  return randomTrack;
+};
+
 export {
   searchTracks,
   loadFavorites,
   addFavorite,
   setFavorites,
   removeFavorite,
-  isFavorite
+  isFavorite,
+  getRandomFavoriteTrack,
 };
