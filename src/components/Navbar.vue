@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light" :class="{ 'navbarOpen': show }">
+  <nav class="navbar navbar-expand-lg navbar-light" :class="{ 'navbarOpen': show }">
      <router-link class="navbar-brand" to="/"><img class="logo" alt="Vue logo" src="../assets/logo.png"></router-link>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" @click="toggleNavbar">
       <span class="navbar-toggler-icon"></span>

@@ -3,6 +3,7 @@
     <h3>Search</h3>
     <SearchForm @search="setTracks" @loading="loadingTracks"/>
     <Loading :loading="loading" />
+    <TrackList v-if="tracks" :tracks="tracks" />
   </div>
 </template>
 
@@ -10,12 +11,14 @@
 import Vue from "vue";
 import Loading from "@/components/Loading.vue";
 import SearchForm from "@/components/SearchForm.vue";
+import TrackList from "@/components/TrackList.vue";
 import { DeezerTrack } from "@/interfaces";
 export default Vue.extend({
   name: "search",
   components: {
     Loading,
     SearchForm,
+    TrackList
   },
   data() {
     return {
@@ -28,6 +31,9 @@ export default Vue.extend({
       this.tracks = tracks;
     },
     loadingTracks(loading: boolean) {
+      if (loading === true) {
+        this.tracks = [];
+      }
       this.loading = loading;
     }
   }
