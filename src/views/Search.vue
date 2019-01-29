@@ -3,7 +3,8 @@
     <h3>Search</h3>
     <SearchForm @search="setTracks" @loading="loadingTracks"/>
     <Loading :loading="loading" />
-    <TrackList v-if="tracks" :tracks="tracks" />
+    <TrackList v-if="tracks.length > 0" :tracks="tracks" />
+    <p v-else-if="!loading && searched && tracks.length === 0">Pas de tracks</p>
   </div>
 </template>
 
@@ -23,14 +24,16 @@ export default Vue.extend({
   data() {
     return {
       loading: false as boolean,
-      tracks: [] as Array<DeezerTrack>
+      tracks: [] as Array<DeezerTrack>,
+      searched: false as boolean
     };
   },
   methods: {
-    setTracks(tracks: Array<DeezerTrack>) {
+    setTracks(tracks: Array<DeezerTrack>): void {
       this.tracks = tracks;
+      if (!this.searched) this.searched = true;
     },
-    loadingTracks(loading: boolean) {
+    loadingTracks(loading: boolean): void {
       if (loading === true) {
         this.tracks = [];
       }
