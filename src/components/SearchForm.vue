@@ -25,7 +25,7 @@ export default Vue.extend({
     return {
       search: {
         content: "" as string,
-        order: "" as string
+        order: "TRACK" as string
       }
     };
   },
