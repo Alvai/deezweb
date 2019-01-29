@@ -6,7 +6,7 @@
       <p class="card-text truncate" :title="track.artist.name">{{ track.artist.name }}</p>
       <p class="card-text truncate" :title="track.album.title">{{ track.album.title }}</p>
       <audio class="track-audio" :src="track.preview" controls></audio>
-      <i @click="handleFavorite" class="fa-heart" :class="liked"></i>
+      <i @click="handleFavorite" class="fa-heart" :class="isLiked ? 'fas' : 'far'"></i>
     </div>
   </div>
 </template>
@@ -24,19 +24,31 @@ export default Vue.extend({
   },
   data() {
     return {
-      liked: isFavorite(this.track) ? "fas" : "far" as String
+      liked: false as boolean
     }
   },
   methods: {
-    handleFavorite():void {
+    handleFavorite(): void {
       if (isFavorite(this.track)) {
         removeFavorite(this.track);
-        this.liked = "far";
+        this.$emit('dislike', this.track.id);
       } else {
         addFavorite(this.track);
-        this.liked = "fas";
       }
+      this.isFavoriteLiked(this.track);
     },
+    isFavoriteLiked(track: DeezerTrack) {
+      this.liked = isFavorite(track);
+    }
+  },
+  computed: {
+    isLiked: function() {
+      this.isFavoriteLiked(this.track);
+      return this.liked;
+    }
+  },
+  created() {
+    this.isFavoriteLiked(this.track);
   }
 });
 </script>
