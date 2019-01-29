@@ -6,6 +6,7 @@
       <p class="card-text truncate" :title="track.artist.name">{{ track.artist.name }}</p>
       <p class="card-text truncate" :title="track.album.title">{{ track.album.title }}</p>
       <audio class="track-audio" :src="track.preview" controls></audio>
+      <i @click="addFavorite" class="fa-heart" :class="liked"></i>
     </div>
   </div>
 </template>
@@ -19,6 +20,23 @@ export default Vue.extend({
     track: {
       type: Object as () => DeezerTrack
     }
+  },
+  data() {
+    return {
+      liked: "far"
+    }
+  },
+  methods: {
+    checkLiked: () => {
+
+    },
+    addFavorite() {
+      console.log(this.track.id);
+      this.liked = "fas"
+    }
+  },
+  created() {
+
   }
 });
 </script>
