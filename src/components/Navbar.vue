@@ -20,17 +20,17 @@
   </nav>
 </template>
 
-<script>
+<script lang="ts">
 import Vue from "vue";
 export default Vue.extend({
   name: "Navbar",
   data() {
     return {
-      show: false
+      show: false as boolean
     };
   },
   methods: {
-    toggleNavbar() {
+    toggleNavbar(): void {
       this.show = !this.show;
     }
   }

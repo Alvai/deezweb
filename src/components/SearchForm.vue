@@ -30,7 +30,7 @@ export default Vue.extend({
     };
   },
   methods: {
-    async getTracks(search: SearchBar) {
+    async getTracks(search: SearchBar): Promise<void> {
       if (this.search.content && this.search.order) {
         this.$emit("loading", true);
         const tracks = await searchTracks(search);
