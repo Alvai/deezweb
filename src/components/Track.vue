@@ -2,9 +2,10 @@
   <div class="card track" style="width: 18rem;">
     <img class="card-img-top" :src="track.album.cover_xl" alt="Card image cap">
     <div class="card-body">
-      <h5 class="card-title">{{ track.title }}</h5>
-      <p class="card-text">{{ track.artist.name }}</p>
-      <p class="card-text">{{ track.album.title }}</p>
+      <h5 class="card-title truncate" :title="track.title">{{ track.title }}</h5>
+      <p class="card-text truncate" :title="track.artist.name">{{ track.artist.name }}</p>
+      <p class="card-text truncate" :title="track.album.title">{{ track.album.title }}</p>
+      <audio class="track-audio" :src="track.preview" controls></audio>
     </div>
   </div>
 </template>
@@ -26,6 +27,18 @@ export default Vue.extend({
   .track {
     justify-self: center;
     align-self: center;
-    min-height: 500px;
+
+    max-height: 100%;
+    min-width: 90%;
+    &-audio {
+      width: 100%;
+      margin-bottom: auto;
+    }
+  }
+  .truncate {
+    max-height: 40%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 </style>
