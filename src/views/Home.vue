@@ -33,6 +33,7 @@ export default Vue.extend({
   methods: {
     getTrack() {
       this.loading = true;
+      this.favorites = loadFavorites();
       this.randomTrack = getRandomFavoriteTrack();
       this.loading = false;
     }
