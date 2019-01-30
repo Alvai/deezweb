@@ -19,3 +19,15 @@ $alvai-rose: #F97079;
 $alvai-light: #FFFFCB;
 $alvai-yellow: #FFD975;
 $alvai-snow: #F9F9F9;
+
+.btn-darky {
+  transition: background-color 0.5s ease;
+  color: $alvai-snow;
+  border: 1px solid $alvai-dark;
+  background-color: $alvai-dark;
+  &:hover {
+    color: $alvai-dark;
+    border: 1px solid $alvai-snow;
+    background-color: $alvai-snow;
+  }
+}
