@@ -30,6 +30,8 @@ html, body, #app {
   text-align: center;
   color: $alvai-dark;
   background-color: $alvai-snow;
+  min-height: fit-content;
+  padding-bottom: 5vh;
 }
 #nav {
   padding: 30px;
