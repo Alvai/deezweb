@@ -1,6 +1,6 @@
 <template>
   <div class="search">
-    <h3>Search</h3>
+    <h3>Recherche</h3>
     <SearchForm @search="setTracks" @loading="loadingTracks"/>
     <Loading :loading="loading" />
     <TrackList v-if="tracks.length > 0" :tracks="tracks" />

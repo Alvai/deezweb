@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <h2>Home</h2>
+    <h2>Accueil</h2>
     <div v-if="favorites.length > 0">
       <Loading :loading="loading" />
       <Track v-if="!loading" :track="randomTrack" @dislike="getTrack" />
@@ -43,17 +43,3 @@ export default Vue.extend({
   }
 });
 </script>
-
-<style lang="scss" scoped>
-.btn-darky {
-  transition: background-color 0.5s ease;
-  color: $alvai-snow;
-  border: 1px solid $alvai-dark;
-  background-color: $alvai-dark;
-  &:hover {
-    color: $alvai-dark;
-    border: 1px solid $alvai-snow;
-    background-color: $alvai-snow;
-  }
-}
-</style>
