@@ -67,4 +67,7 @@ export default Vue.extend({
     overflow: hidden;
     text-overflow: ellipsis;
   }
+  .fa-heart {
+    color: $alvai-yellow;
+  }
 </style>
