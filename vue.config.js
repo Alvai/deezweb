@@ -1,4 +1,5 @@
 module.exports = {
+  publicPath: "/deezweb/",
   pwa: {
     name: "Deezweb",
     themeColor: "#ffd975"
