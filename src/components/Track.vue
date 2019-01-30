@@ -55,11 +55,7 @@ export default Vue.extend({
 
 <style lang="scss" scoped>
   .track {
-    justify-self: center;
-    align-self: center;
-
-    max-height: 100%;
-    min-width: 90%;
+    margin: auto;
     &-audio {
       width: 100%;
       margin-bottom: auto;
