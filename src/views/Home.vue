@@ -4,6 +4,8 @@
     <div v-if="favorites.length > 0">
       <Loading :loading="loading" />
       <Track v-if="!loading" :track="randomTrack" @dislike="getTrack" />
+      <br />
+      <button class="btn btn-darky" @click="getTrack">Favoris Aléatoire</button>
     </div>
   </div>
 </template>
@@ -41,3 +43,17 @@ export default Vue.extend({
   }
 });
 </script>
+
+<style lang="scss" scoped>
+.btn-darky {
+  transition: background-color 0.5s ease;
+  color: $alvai-snow;
+  border: 1px solid $alvai-dark;
+  background-color: $alvai-dark;
+  &:hover {
+    color: $alvai-dark;
+    border: 1px solid $alvai-snow;
+    background-color: $alvai-snow;
+  }
+}
+</style>

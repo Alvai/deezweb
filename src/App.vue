@@ -19,12 +19,17 @@ export default Vue.extend({
 </script>
 
 <style lang="scss">
+html, body, #app {
+  height: 100%;
+  width: 100%;
+}
 #app {
   font-family: "IBM Plex Mono", monospace, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: $alvai-dark;
+  background-color: $alvai-snow;
 }
 #nav {
   padding: 30px;
