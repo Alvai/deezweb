@@ -41,10 +41,10 @@ export default Vue.extend({
 .logo {
   width: 10vw;
   @media only screen and (max-width: 550px) {
-  width: 40vw;
+    width: 40vw;
   }
   @media only screen and (min-width: 560px) and (max-width: 100px) {
-  width: 30vw;
+    width: 30vw;
   }
 }
 .navbar-brand {

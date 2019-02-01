@@ -53,9 +53,9 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
-  .form {
-    border: 1px solid;
-    padding: 10px;
-    border-radius: 10px;
-  }
+.form {
+  border: 1px solid;
+  padding: 10px;
+  border-radius: 10px;
+}
 </style>

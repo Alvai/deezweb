@@ -13,7 +13,7 @@
 
 <script lang="ts">
 import Vue from "vue";
-import { DeezerTrack } from '@/interfaces';
+import { DeezerTrack } from "@/interfaces";
 import { isFavorite, removeFavorite, addFavorite } from "@/utils/trackService";
 export default Vue.extend({
   name: "Track",
@@ -25,13 +25,13 @@ export default Vue.extend({
   data() {
     return {
       liked: false as boolean
-    }
+    };
   },
   methods: {
     handleFavorite(): void {
       if (isFavorite(this.track)) {
         removeFavorite(this.track);
-        this.$emit('dislike', this.track.id);
+        this.$emit("dislike", this.track.id);
       } else {
         addFavorite(this.track);
       }
@@ -54,20 +54,20 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
-  .track {
-    margin: auto;
-    &-audio {
-      width: 100%;
-      margin-bottom: auto;
-    }
+.track {
+  margin: auto;
+  &-audio {
+    width: 100%;
+    margin-bottom: auto;
   }
-  .truncate {
-    max-height: 40%;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  .fa-heart {
-    color: $alvai-yellow;
-  }
+}
+.truncate {
+  max-height: 40%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.fa-heart {
+  color: $alvai-yellow;
+}
 </style>

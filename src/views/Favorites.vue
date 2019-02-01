@@ -8,9 +8,9 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
-import { loadFavorites } from '@/utils/trackService';
-import { DeezerTrack } from '@/interfaces';
+import Vue from "vue";
+import { loadFavorites } from "@/utils/trackService";
+import { DeezerTrack } from "@/interfaces";
 import Loading from "@/components/Loading.vue";
 import TrackList from "@/components/TrackList.vue";
 export default Vue.extend({
@@ -23,10 +23,10 @@ export default Vue.extend({
     return {
       favorites: [] as Array<DeezerTrack>,
       loading: true as boolean
-    }
+    };
   },
   methods: {
-    getFavorites() {
+    getFavorites() {
       this.favorites = loadFavorites();
     }
   },
@@ -34,5 +34,5 @@ export default Vue.extend({
     this.getFavorites();
     this.loading = false;
   }
-})
+});
 </script>

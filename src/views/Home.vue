@@ -12,9 +12,9 @@
 
 <script lang="ts">
 import Vue from "vue";
-import { DeezerTrack } from '@/interfaces';
-import Track from '@/components/Track.vue';
-import Loading from '@/components/Loading.vue';
+import { DeezerTrack } from "@/interfaces";
+import Track from "@/components/Track.vue";
+import Loading from "@/components/Loading.vue";
 import { loadFavorites, getRandomFavoriteTrack } from "../utils/trackService";
 
 export default Vue.extend({
@@ -40,7 +40,7 @@ export default Vue.extend({
   },
   created() {
     this.favorites = loadFavorites();
-    this.getTrack(); 
+    this.getTrack();
   }
 });
 </script>
