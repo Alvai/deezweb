@@ -8,7 +8,7 @@ const searchTracks = async (
   searchBar: SearchBar
 ): Promise<Array<DeezerTrack>> => {
   const { content, order } = searchBar;
-  const res = await api.get(`/search?q=${content}&order=${order}_DESC`);
+  const res = await api.get(`/search?q=${content}&order=${order}_ASC`);
   return res.data.data;
 };
 
