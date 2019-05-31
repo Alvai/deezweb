@@ -9,7 +9,7 @@
     "deploy": "npm run build;git checkout --orphan gh-pages;git rm -rf .;git add -f dist;git commit -m \"Déploiement du projet sur Github Pages\";git filter-branch -f --prune-empty --subdirectory-filter dist;git push -f origin gh-pages;"
   },
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.19.0",
     "bootstrap": "^4.3.1",
     "register-service-worker": "^1.5.2",
     "vue": "^2.5.21",
